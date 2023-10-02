@@ -17,7 +17,7 @@ def yolo():
 
     weights = ['weights/yolov5m.pt', 'weights/Bird_drone.pt']
 
-    classes = ['Drone', 'bird']
+    classes = ['Drone', 'None Drone']
 
     frame = cv2.imread(src[-1])
 
@@ -75,7 +75,7 @@ def yolo():
                 if detection_class < 2:
                     frame = cv2.putText(frame, classes[detection_class], (x1 + 50, y1-5), 0, 0.5, (0, 0, 255), 1)
                 else:
-                    frame = cv2.putText(frame, 'Aeroplane', (x1 + 50, y1-5), 0, 0.5, (0, 0, 255), 1)
+                    frame = cv2.putText(frame, classes[1], (x1 + 50, y1-5), 0, 0.5, (0, 0, 255), 1)
 
     cv2.imwrite("result.jpg", frame)
 
