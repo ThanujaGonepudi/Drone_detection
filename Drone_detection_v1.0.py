@@ -72,9 +72,8 @@ def yolo():
             detection_class = int(predictions[5])
             if score > score_th:
                 frame = cv2.rectangle(frame, (x1, y1), (x1 + w, y1 + h), (255, 0, 0), 4)
-                frame = cv2.putText(frame, str(np.round(score, 2)), (x1, y1), 0, 0.5, (0, 0, 255), 2)
+                frame = cv2.putText(frame, classes[detection_class] + '  ' + str(np.round(score, 2)), (x1, y1), 0, 0.5, (0, 0, 255), 2)
                 
-                frame = cv2.putText(frame, classes[detection_class], (x1 + 50, y1-5), 0, 0.5, (0, 0, 255), 1)
 
     cv2.imwrite("result.jpg", frame)
 
