@@ -9,11 +9,11 @@ import cv2
 
 
 def yolo():
-    src = ['input_images/image11.jpg',
-           "input_images/forest.jpg",
-           "input_images/mavic_image5.jpg",
-           'input_images/db5.png',
-           "input_images/ap1.jpg"]
+    src = ['input_images/drone_image.jpg',
+           "input_images/fb.jpg",
+           "input_images/image11.jpg",
+           'input_images/bird1.png',
+           "input_images/images1.jpg"]
 
     weights = ['weights/best.pt', 'weights/Bird_drone.pt']
     weight_file = weights[0]
