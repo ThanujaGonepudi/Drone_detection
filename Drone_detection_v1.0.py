@@ -24,7 +24,7 @@ def yolo():
 
     conf_thres = 0.25
     iou_thres = 0.45
-    max_det = 5
+    max_det = 10
     agnostic_nms = False
     imgsz = [640, 640]
     score_th = 0.1
